@@ -1,13 +1,18 @@
 #!/bin/bash
 
+echo "Mounting your USB device"
+
+mkdir /mnt/ntfs
+mount /dev/sda1 /mnt/ntfs
+
 echo "initializing Okcash First time Sync"
 
 date
 
 OKUSER=$USER
 HOMEDIR="/home/$OKUSER"
-OKCASHPATH="$HOMEDIR/.okcash"
-
+OKCASHPATH="/mnt/ntfs"
+OKDEFAULT="$HOMEDIR/.okcash"
 echo "User: $OKUSER"
 echo "User home dir: $HOMEDIR"
 echo "User Okcash path: $OKCASHPATH"
@@ -36,6 +41,11 @@ rpcp=$(pwgen -ncsB 75 1)
 echo "rpcuser=$rpcu
 rpcpassword=$rpcp
 daemon=1" > "$OKCASHPATH"/okcash.conf
+
+
+#Adds okcash.conf to default derectory and gives new $OKCASHPATH
+touch $OKDEFAULT/okcash.conf
+echo datadir=$OKCASHPATH > $OKDEFAULT/okcash.conf
 
 # Delete the downloaded blockchain zip file // free space from device
 rm $OKCASHPATH/ok-blockchain-arm.zip
