@@ -1,15 +1,15 @@
 #!/bin/bash
-echo "Installing the Okcash binaries for Ubuntu 14 on its latest version"
+echo "Installing the Okcash binaries on its latest version"
 
 date
 
 OKUSER=$USER
 HOMEDIR="/home/$OKUSER"
-OKCASHPATH="$HOMEDIR/.okcash"
+OKCASHBINS="$HOMEDIR/ok_binaries"
 
 echo "User: $OKUSER"
 echo "User home dir: $HOMEDIR"
-echo "User Okcash path: $OKCASHPATH"
+echo "User Okcash path: $OKCASHBINS"
 
 sudo apt-get install git unzip -y
 
@@ -23,6 +23,13 @@ sudo apt-get update
 
 sudo apt-get install -y libdb4.8-dev libdb4.8++-dev -y
 
+if [ ! -e "$OKCASHBINS" ]
+then
+        mkdir $OKCASHBINS
+fi
+
+cd $OKCASHBINS
+
 DOWNLOADFILE=$(curl -s https://api.github.com/repos/okcashpro/okcash/releases | grep browser_download_url | grep linux64 | head -n 1 | cut -d '"' -f 4)
 DOWNLOADNAME=$(curl -s https://api.github.com/repos/okcashpro/okcash/releases | grep name | grep linux64 | head -n 1 | cut -d '"' -f 4)
 sudo wget "$DOWNLOADFILE"
@@ -31,10 +38,12 @@ sudo chmod 755 okcashd
 sudo cp okcashd /usr/local/bin
 sudo chmod 755 okcash
 sudo cp okcash /usr/local/bin
+rm $DOWNLOADNAME
+cd
 
 # end Client
 
 echo "Installed latest Okcash binaries for:"
-uname -o
+uname -a
 echo "enjoy your OK experience"
 exit 0
