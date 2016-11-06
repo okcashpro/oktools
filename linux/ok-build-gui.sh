@@ -5,11 +5,11 @@ date
 
 OKUSER=$USER
 HOMEDIR="/home/$OKUSER"
-OKCASHPATH="$HOMEDIR/.okcash"
+OKAPPSPATH="$HOMEDIR/ok_apps"
 
 echo "User: $OKUSER"
 echo "User home dir: $HOMEDIR"
-echo "User Okcash path: $OKCASHPATH"
+echo "Okcash apps path: $OKAPPSPATH"
 
 sudo apt-get install git build-essential libssl-dev libboost-all-dev libqrencode-dev libminiupnpc-dev -y
 
@@ -20,6 +20,10 @@ sudo add-apt-repository -y ppa:bitcoin/bitcoin
 sudo apt-get update
 
 sudo apt-get install -y libdb4.8-dev libdb4.8++-dev -y
+
+if [ ! -e "$OKAPPSPATH" ]
+then
+fi
 
 cd
 
@@ -33,7 +37,7 @@ make
 
 strip okcash
 
-cp okcash $HOMEDIR
+cp okcash $OKAPPSPATH
 
 sudo cp okcash /usr/local/bin
 
