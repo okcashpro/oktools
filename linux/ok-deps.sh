@@ -3,8 +3,6 @@ echo "installing Okcash dependencies"
 
 date
 
-sudo apt-get install unzip pwgen -y
-
 sudo apt-get install build-essential libssl-dev libboost-all-dev libqrencode-dev libminiupnpc-dev -y
 
 sudo apt-get install qtcreator qttools5-dev-tools  libqt5webkit5-dev 

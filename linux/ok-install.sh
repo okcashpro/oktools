@@ -11,7 +11,7 @@ echo "User: $OKUSER"
 echo "User home dir: $HOMEDIR"
 echo "User Okcash path: $OKCASHPATH"
 
-sudo apt-get install unzip pwgen -y
+sudo apt-get install git unzip -y
 
 sudo apt-get install build-essential libssl-dev libboost-all-dev libqrencode-dev libminiupnpc-dev -y
 

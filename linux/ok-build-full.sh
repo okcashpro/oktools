@@ -11,9 +11,7 @@ echo "User: $OKUSER"
 echo "User home dir: $HOMEDIR"
 echo "User Okcash path: $OKCASHPATH"
 
-sudo apt-get install unzip pwgen -y
-
-sudo apt-get install build-essential libssl-dev libboost-all-dev libqrencode-dev libminiupnpc-dev -y
+sudo apt-get install git build-essential libssl-dev libboost-all-dev libqrencode-dev libminiupnpc-dev -y
 
 sudo apt-get install qtcreator qttools5-dev-tools  libqt5webkit5-dev -y
 
@@ -38,8 +36,6 @@ strip okcashd
 sudo cp okcashd /usr/local/bin
 
 cp okcashd $HOMEDIR
-
-cp /
 
 cd ..
 

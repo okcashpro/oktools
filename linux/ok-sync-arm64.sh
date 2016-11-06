@@ -38,7 +38,7 @@ rpcpassword=$rpcp
 daemon=1" > "$OKCASHPATH"/okcash.conf
 
 # Delete the downloaded blockchain zip file // free space from device
-rm $OKCASHPATH/ok-blockchain-arm64.zip
+#rm $OKCASHPATH/ok-blockchain-arm64.zip
 
 # end Client
 
