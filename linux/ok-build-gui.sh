@@ -44,7 +44,7 @@ sudo cp okcash /usr/local/bin
 
 # end Client
 
-echo "Done compiling OK from source: Okcash GUI - okcash - on its latest version for:"
-uname -o
+echo "Done compiling and installing OK from source: Okcash GUI - okcash - on its latest version for:"
+uname -a
 echo "enjoy your OK experience"
 exit 0

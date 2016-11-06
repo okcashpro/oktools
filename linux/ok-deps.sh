@@ -1,7 +1,9 @@
 #!/bin/bash
-echo "installing Okcash dependencies"
+echo "installing the required dependencies for Okcash apps"
 
 date
+
+sudo apt-get install unzip pwgen -y
 
 sudo apt-get install build-essential libssl-dev libboost-all-dev libqrencode-dev libminiupnpc-dev -y
 
@@ -15,7 +17,7 @@ sudo apt-get install -y libdb4.8-dev libdb4.8++-dev -y
 
 # end Client
 
-echo "completed setting up the Okcash dependencies for:"
+echo "completed setting up all the required dependencies for Okcash apps:"
 uname -o
 echo "enjoy your OK experience"
 exit 0
