@@ -23,6 +23,7 @@ sudo apt-get install -y libdb4.8-dev libdb4.8++-dev -y
 
 if [ ! -e "$OKAPPSPATH" ]
 then
+        mkdir $OKAPPSPATH
 fi
 
 cd
