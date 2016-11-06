@@ -38,7 +38,7 @@ chmod 755 okcashd
 sudo cp okcashd /usr/local/bin
 chmod 755 okcash
 sudo cp okcash /usr/local/bin
-rm $DOWNLOADNAME -y
+sudo rm $DOWNLOADNAME
 cd
 
 # end Client
