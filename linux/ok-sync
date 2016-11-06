@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "initializing Okcash First time Sync"
+echo "Initializing Okcash First time instant Sync"
 
 date
 
@@ -37,7 +37,7 @@ rpcpassword=$rpcp
 daemon=1" > "$OKCASHPATH"/okcash.conf
 
 # Delete the downloaded blockchain zip file // free space from device
-rm $OKCASHPATH/ok-blockchain.zip
+#rm $OKCASHPATH/ok-blockchain.zip
 
 # end Client
 
