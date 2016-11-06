@@ -32,13 +32,13 @@ cd $OKCASHBINS
 
 DOWNLOADFILE=$(curl -s https://api.github.com/repos/okcashpro/okcash/releases | grep browser_download_url | grep linux64 | head -n 1 | cut -d '"' -f 4)
 DOWNLOADNAME=$(curl -s https://api.github.com/repos/okcashpro/okcash/releases | grep name | grep linux64 | head -n 1 | cut -d '"' -f 4)
-sudo wget "$DOWNLOADFILE"
-sudo unzip "$DOWNLOADNAME"
-sudo chmod 755 okcashd
+wget "$DOWNLOADFILE"
+unzip "$DOWNLOADNAME"
+chmod 755 okcashd
 sudo cp okcashd /usr/local/bin
-sudo chmod 755 okcash
+chmod 755 okcash
 sudo cp okcash /usr/local/bin
-rm $DOWNLOADNAME
+rm $DOWNLOADNAME -y
 cd
 
 # end Client
