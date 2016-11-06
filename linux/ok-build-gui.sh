@@ -13,7 +13,7 @@ echo "Okcash apps path: $OKAPPSPATH"
 
 sudo apt-get install git build-essential libssl-dev libboost-all-dev libqrencode-dev libminiupnpc-dev -y
 
-sudo apt-get install qtcreator qttools5-dev-tools  libqt5webkit5-dev -y
+sudo apt-get install qtcreator qt5-default qttools5-dev-tools  libqt5webkit5-dev -y
 
 sudo add-apt-repository -y ppa:bitcoin/bitcoin
 
