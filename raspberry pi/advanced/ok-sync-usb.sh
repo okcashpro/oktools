@@ -24,14 +24,14 @@ then
     mkdir $OKCASHPATH
 fi
 
-rm $OKCASHPATH/ok-blockchain-arm.zip
+rm $OKCASHPATH/ok-blockchain.zip
 
 
 # Download OK Blockchain arm
 cd $OKCASHPATH
-wget https://github.com/okcashpro/ok-blockchain-iot/releases/download/latest/ok-blockchain-arm.zip
+wget https://github.com/okcashpro/ok-blockchain/releases/download/latest/ok-blockchain.zip
 cd $OKCASHPATH
-unzip ok-blockchain-arm.zip
+unzip ok-blockchain.zip
 
 # Create configuration File
 touch $OKCASHPATH/okcash.conf
@@ -46,7 +46,7 @@ touch $OKDEFAULT/okcash.conf
 echo datadir=$OKCASHPATH > $OKDEFAULT/okcash.conf
 
 # Delete the downloaded blockchain zip file // free space from device
-rm $OKCASHPATH/ok-blockchain-arm.zip
+# rm $OKCASHPATH/ok-blockchain.zip
 
 # end Client
 
