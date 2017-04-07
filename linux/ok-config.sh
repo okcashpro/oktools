@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "Configuring the okcash.conf file"
 
 date
@@ -13,3 +14,6 @@ rpcp=$(pwgen -ncsB 20 1)
 echo "rpcuser=$rpcu
 rpcpassword=$rpcp
 daemon=1" > "$OKCASHPATH"/okcash.conf
+
+echo "okcash.conf file created, enjoy"
+exit 0
