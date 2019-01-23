@@ -13,7 +13,7 @@ echo "Okcash apps path: $OKAPPSPATH"
 
 sudo apt-get install git build-essential libssl-dev libboost-all-dev libqrencode-dev libminiupnpc-dev -y
 
-sudo add-apt-repository -y ppa:bitcoin/bitcoin
+sudo add-apt-repository ppa:bitcoin/bitcoin -y
 
 sudo apt-get update
 
