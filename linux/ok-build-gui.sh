@@ -15,11 +15,11 @@ sudo apt-get install git build-essential libssl-dev libboost-all-dev libqrencode
 
 sudo apt-get install qtcreator qt5-default qttools5-dev-tools  libqt5webkit5-dev -y
 
-sudo add-apt-repository -y ppa:bitcoin/bitcoin
+sudo add-apt-repository ppa:bitcoin/bitcoin -y
 
 sudo apt-get update
 
-sudo apt-get install -y libdb4.8-dev libdb4.8++-dev -y
+sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
 
 if [ ! -e "$OKAPPSPATH" ]
 then
