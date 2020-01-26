@@ -1,6 +1,6 @@
 #!/bin/bash
-
-echo "initializing Okcash First time Sync"
+echo "Initializing Okcash First time instant Sync"
+echo "This could take a minute, enjoy some coffee or water and come back soon..."
 
 date
 
@@ -20,14 +20,14 @@ then
     mkdir $OKCASHPATH
 fi
 
-rm $OKCASHPATH/ok-blockchain-arm64.zip
+#make sure old blockchain zip or not fully downloaded data gets erased to prevent errors
+rm $OKCASHPATH/ok-blockchain.zip
 
-
-# Download OK Blockchain arm64
+# Download OK Blockchain
 cd $OKCASHPATH
-wget https://github.com/okcashpro/ok-blockchain-iot/releases/download/latest/ok-blockchain-arm64.zip
+wget https://github.com/okcashpro/ok-blockchain/releases/download/latest/ok-blockchain.zip
 cd $OKCASHPATH
-unzip ok-blockchain-arm64.zip
+unzip ok-blockchain.zip
 
 # Create configuration File
 touch $OKCASHPATH/okcash.conf
@@ -38,11 +38,11 @@ rpcpassword=$rpcp
 daemon=1" > "$OKCASHPATH"/okcash.conf
 
 # Delete the downloaded blockchain zip file // free space from device
-#rm $OKCASHPATH/ok-blockchain-arm64.zip
+#rm $OKCASHPATH/ok-blockchain.zip
 
 # end Client
-
-echo "completed Okcash first time instant sync for:"
-uname -m
-echo "enjoy your experience"
+echo "okcash.conf file created with random rpcuser and rpcpassword."
+echo "Completed Okcash first time instant sync for:"
+uname -o
+echo "enjoy your OK experience"
 exit 0

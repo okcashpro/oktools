@@ -1,19 +1,18 @@
 #!/bin/bash
-echo "Compiling Okcash GUI and Daemon - okcash + okcashd - from source on its latest version"
+echo "Compiling Okcash Graphical User Interface and node - okcash + okcashd - from source on its latest version"
+echo "This could take a minute, enjoy some coffee or water and come back soon..."
 
 date
 
 OKUSER=$USER
 HOMEDIR="/home/$OKUSER"
-OKAPPSPATH="$HOMEDIR/ok_apps"
+OKAPPSPATH="$HOMEDIR/okapps"
 
 echo "User: $OKUSER"
 echo "User home dir: $HOMEDIR"
 echo "Okcash apps path: $OKAPPSPATH"
 
 sudo apt-get install git build-essential libssl-dev libboost-all-dev libqrencode-dev libminiupnpc-dev -y
-
-sudo apt-get install libssl1.0-dev -y
 
 sudo apt-get install qtcreator qt5-default qttools5-dev-tools  libqt5webkit5-dev -y
 
@@ -56,9 +55,12 @@ cp okcash $OKAPPSPATH
 
 sudo cp okcash /usr/local/bin
 
+cd
+
 # end Client
 
 echo "Done compiling and installing OK from source: Okcash GUI and Daemon - okcash + okcashd - on its latest version for:"
 uname -a
+echo "Okcash is now installed on the system, a copy was saved over the - okapps - folder."
 echo "enjoy your OK experience"
 exit 0

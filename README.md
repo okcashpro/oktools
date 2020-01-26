@@ -1,7 +1,6 @@
 # ok-scripts
-Automated scripts to help first time OK users with different tasks over Linux and IOT systems.
+Different oktools to help Blockchain / Cryptocurrency users and developers with different tasks over different OS and IOT systems.
 
-- Compile Okcash (Qt) and/or Okcashd (daemon).
+- Compile / Install different Cryptocurrencies and/or nodes.
 - Install required dependencies.
-- Install Okcash & Okcashd.
-- create okcash.conf file with random username and passwords.
+- create okcash.conf and other cryptocurrencies config file with random username and password.

@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "Installing the Okcash binaries on its latest version"
+echo "This could take a minute, enjoy some coffee or water and come back soon..."
 
 date
 
@@ -30,8 +31,8 @@ fi
 
 cd $OKCASHBINS
 
-DOWNLOADFILE=$(curl -s https://api.github.com/repos/okcashpro/okcash/releases | grep browser_download_url | grep linux64 | head -n 1 | cut -d '"' -f 4)
-DOWNLOADNAME=$(curl -s https://api.github.com/repos/okcashpro/okcash/releases | grep name | grep linux64 | head -n 1 | cut -d '"' -f 4)
+DOWNLOADFILE=$(curl -s https://api.github.com/repos/okcashpro/okcash/releases | grep browser_download_url | grep buntu16 | head -n 1 | cut -d '"' -f 4)
+DOWNLOADNAME=$(curl -s https://api.github.com/repos/okcashpro/okcash/releases | grep name | grep buntu16 | head -n 1 | cut -d '"' -f 4)
 wget "$DOWNLOADFILE"
 unzip "$DOWNLOADNAME"
 chmod 755 okcashd
@@ -45,5 +46,6 @@ cd
 
 echo "Installed latest Okcash binaries for:"
 uname -a
+echo "Okcash is now installed on the system, a copy was saved over the - okapps - folder."
 echo "enjoy your OK experience"
 exit 0

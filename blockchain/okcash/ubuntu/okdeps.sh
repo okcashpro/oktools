@@ -1,5 +1,6 @@
 #!/bin/bash
-echo "installing the required dependencies for Okcash apps"
+echo "installing the required dependencies for Okcash Graphical User Interface and node."
+echo "This could take a minute, enjoy some coffee or water and come back soon..."
 
 date
 
@@ -17,7 +18,7 @@ sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
 
 # end Client
 
-echo "completed setting up all the required dependencies for Okcash apps:"
+echo "All the required dependencies for Okcash GUI and node are now installed for:"
 uname -o
 echo "enjoy your OK experience"
 exit 0

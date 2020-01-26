@@ -1,11 +1,12 @@
 #!/bin/bash
-echo "Compiling Okcash GUI and Daemon - okcash + okcashd - from source on its latest version"
+echo "Compiling Okcash Graphical User Interface - okcash - from source on its latest version"
+echo "This could take a minute, enjoy some coffee or water and come back soon..."
 
 date
 
 OKUSER=$USER
 HOMEDIR="/home/$OKUSER"
-OKAPPSPATH="$HOMEDIR/ok_apps"
+OKAPPSPATH="$HOMEDIR/okapps"
 
 echo "User: $OKUSER"
 echo "User home dir: $HOMEDIR"
@@ -32,18 +33,6 @@ git clone https://github.com/okcashpro/okcash
 
 cd okcash
 
-cd src
-
-make -f makefile.unix USE_UPNP=-
-
-strip okcashd
-
-sudo cp okcashd /usr/local/bin
-
-cp okcashd $OKAPPSPATH
-
-cd ..
-
 qmake
 
 make
@@ -54,9 +43,12 @@ cp okcash $OKAPPSPATH
 
 sudo cp okcash /usr/local/bin
 
+cd
+
 # end Client
 
-echo "Done compiling and installing OK from source: Okcash GUI and Daemon - okcash + okcashd - on its latest version for:"
+echo "Done compiling and installing OK from source: Okcash GUI - okcash - on its latest version for:"
 uname -a
+echo "Okcash is now installed on the system, a copy was saved over the - okapps - folder."
 echo "enjoy your OK experience"
 exit 0

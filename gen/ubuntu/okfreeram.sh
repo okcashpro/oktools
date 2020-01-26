@@ -1,6 +1,6 @@
 #!/bin/bash
 echo
-echo " Cleaning the Ram by ROKOS v7 core System"
+echo " oktools are now cleaning the Ram"
 echo
 echo " Ram being used by the system before clean up"
 echo
@@ -14,6 +14,6 @@ echo " Ram being used by the system after clean up"
 echo
 free -m
 echo
-echo " Njoy your system!"
+echo " Enjoy!"
 echo
 exit 0

@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Configuring the okcash.conf file"
+echo "Creating a default okcash.conf file"
 
 date
 
@@ -15,5 +15,5 @@ echo "rpcuser=$rpcu
 rpcpassword=$rpcp
 daemon=1" > "$OKCASHPATH"/okcash.conf
 
-echo "okcash.conf file created, enjoy"
+echo "okcash.conf file created and added to the .okcash data folder under the home directory, enjoy"
 exit 0
