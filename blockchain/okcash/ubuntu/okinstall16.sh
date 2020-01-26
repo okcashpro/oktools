@@ -12,7 +12,7 @@ echo "User: $OKUSER"
 echo "User home dir: $HOMEDIR"
 echo "User Okcash path: $OKCASHBINS"
 
-sudo apt-get install git unzip -y
+sudo apt-get install git curl unzip -y
 
 sudo apt-get install build-essential libssl-dev libboost-all-dev libqrencode-dev libminiupnpc-dev -y
 
@@ -46,6 +46,6 @@ cd
 
 echo "Installed latest Okcash binaries for:"
 uname -a
-echo "Okcash is now installed on the system, a copy was saved over the - okapps - folder."
+echo "Okcash is now installed on the system, a copy was saved over the - ok_binaries - folder."
 echo "enjoy your OK experience"
 exit 0

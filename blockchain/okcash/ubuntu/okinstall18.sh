@@ -46,6 +46,6 @@ cd
 
 echo "Installed latest Okcash binaries for:"
 uname -a
-echo "Okcash is now installed on the system, a copy was saved over the - okapps - folder."
+echo "Okcash is now installed on the system, a copy was saved over the - ok_binaries - folder."
 echo "enjoy your OK experience"
 exit 0
