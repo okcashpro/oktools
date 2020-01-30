@@ -8,6 +8,8 @@ export CPATH="/usr/local/BerkeleyDB.4.8/include"
 
 export LIBRARY_PATH="/usr/local/BerkeleyDB.4.8/lib"
 
+/usr/share/misc/config.guess
+
 # end Client
 
 echo "Variables locally added for:"

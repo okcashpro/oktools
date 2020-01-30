@@ -8,13 +8,18 @@ sudo apt-get install autoconf libevent-dev libtool libssl-dev libboost-all-dev l
 
 sudo apt-get install qt4-dev-tools libqt4-dev qtchooser libprotobuf-dev protobuf-compiler libqrencode-dev pkg-config -y
 
+cd
+
 wget http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz
 
 sudo tar -xzvf db-4.8.30.NC.tar.gz
 
 cd db-4.8.30.NC/build_unix
 
-sudo ../dist/configure --enable-cxx
+sudo ../dist/configure --enable-cxx --disable-shared --with-pic
+
+# /usr/share/misc/config.guess
+# --build=buildtype
 
 sudo make
 
