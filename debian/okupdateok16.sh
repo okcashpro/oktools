@@ -14,7 +14,7 @@ date
 
 cd
 
-sudo apt-get install curl git unzip -y
+sudo apt-get install git curl unzip -y
 
 # if [ ! -e "$OKCASHBINS" ]
 # then
@@ -23,8 +23,8 @@ sudo apt-get install curl git unzip -y
 
 # cd $OKCASHBINS
 
-DOWNLOADFILE=$(curl -s https://api.github.com/repos/okcashpro/okcash/releases | grep browser_download_url | grep linux64 | head -n 1 | cut -d '"' -f 4)
-DOWNLOADNAME=$(curl -s https://api.github.com/repos/okcashpro/okcash/releases | grep name | grep linux64 | head -n 1 | cut -d '"' -f 4)
+DOWNLOADFILE=$(curl -s https://api.github.com/repos/okcashpro/okcash/releases | grep browser_download_url | grep buntu16 | head -n 1 | cut -d '"' -f 4)
+DOWNLOADNAME=$(curl -s https://api.github.com/repos/okcashpro/okcash/releases | grep name | grep buntu16 | head -n 1 | cut -d '"' -f 4)
 wget "$DOWNLOADFILE"
 unzip "$DOWNLOADNAME"
 chmod 755 okcashd
