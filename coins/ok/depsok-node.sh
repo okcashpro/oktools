@@ -8,7 +8,7 @@ sudo apt-get install unzip pwgen git -y
 
 sudo apt-get install build-essential libssl-dev libboost-all-dev libqrencode-dev libminiupnpc-dev -y
 
-sudo apt-get install qtcreator qttools5-dev-tools  libqt5webkit5-dev -y
+# sudo apt-get install qtcreator qttools5-dev-tools  libqt5webkit5-dev -y
 
 # sudo add-apt-repository ppa:bitcoin/bitcoin -y
 
