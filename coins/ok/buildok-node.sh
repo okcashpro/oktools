@@ -1,52 +1,47 @@
 #!/bin/bash
-echo "Compiling and Installing Okcash node - okcashd - from source on its latest version"
+echo "Compiling Okcash node - okcashd - from source on its latest version"
 echo "This could take a minute, enjoy some coffee or water and come back soon..."
 
 date
 
-# OKUSER=$USER
-# HOMEDIR="/home/$OKUSER"
-# OKAPPSPATH="$HOMEDIR/okapps"
+# Install dependencies for Okcash
+./depsok-node.sh
 
-# echo "User: $OKUSER"
-# echo "User home dir: $HOMEDIR"
-# echo "Okcash apps path: $OKAPPSPATH"
+# Install Berkeley DB 4.8 with apt-get
+cd ..
 
-# sudo apt-get install git build-essential libssl-dev libboost-all-dev libqrencode-dev libminiupnpc-dev -y
+chmod +x *
 
-# sudo add-apt-repository ppa:bitcoin/bitcoin -y
+./db48apt.sh
 
-# sudo apt-get update
-
-# sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
-
-# if [ ! -e "$OKAPPSPATH" ]
-# then
-#         mkdir $OKAPPSPATH
-# fi
-
+# Clone Okcash repository
 cd
 
 git clone https://github.com/okcashpro/okcash
 
-cd okcash
-
-cd src
+# Build okcashd
+cd okcash/src
 
 make -f makefile.unix USE_UPNP=-
 
 strip okcashd
 
-# cp okcashd $OKAPPSPATH
-
+# Install okcashd in the system
 sudo cp okcashd /usr/local/bin
 
+mkdir ~/okapps
+
+cp okcashd ~/okapps
+
+# Remove okcash source folder
 cd
 
-# end Client
+sudo rm -r okcash
 
-echo "Done compiling and installing OK from source: Okcash node - okcashd - on its latest version for:"
+# end Client
+echo "Done compiling and installing OK from source: okcash Daemon < okcashd > on its latest version for:"
 uname -a
-echo "Okcash is now installed on the system, a copy was saved over the - okapps - folder."
+echo "A copy of the binary was saved on <okapps> folder in your home directory"
+echo "You are now empowered with Okcash!"
 echo "enjoy your OK experience"
 exit 0

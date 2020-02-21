@@ -4,47 +4,36 @@ echo "This could take a minute, enjoy some coffee or water and come back soon...
 
 date
 
-# OKUSER=$USER
-# HOMEDIR="/home/$OKUSER"
-# OKAPPSPATH="$HOMEDIR/okapps"
+# Install dependencies for Okcash
+./depsok-full.sh
 
-# echo "User: $OKUSER"
-# echo "User home dir: $HOMEDIR"
-# echo "Okcash apps path: $OKAPPSPATH"
+# Install Berkeley DB 4.8 with apt-get
+cd ..
 
-# cd
+chmod +x *
 
-# sudo apt-get install git build-essential libssl-dev libboost-all-dev libqrencode-dev libminiupnpc-dev -y
+./db48apt.sh
 
-# sudo apt-get install qtcreator qt5-default qttools5-dev-tools  libqt5webkit5-dev -y
-
-# sudo add-apt-repository ppa:bitcoin/bitcoin -y
-
-# sudo apt-get update
-
-# sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
-
-# if [ ! -e "$OKAPPSPATH" ]
-# then
-#         mkdir $OKAPPSPATH
-# fi
-
+# Clone Okcash repository
 cd
 
 git clone https://github.com/okcashpro/okcash
 
-cd okcash
-
-cd src
+# Build okcashd
+cd okcash/src
 
 make -f makefile.unix USE_UPNP=-
 
 strip okcashd
 
+# Install okcashd in the system
 sudo cp okcashd /usr/local/bin
 
-# cp okcashd $OKAPPSPATH
+mkdir ~/okapps
 
+cp okcashd ~/okapps
+
+# Build okcash graphical client
 cd ..
 
 qmake
@@ -53,16 +42,20 @@ make
 
 strip okcash
 
-# cp okcash $OKAPPSPATH
-
+# Install okcash graphical client in the system
 sudo cp okcash /usr/local/bin
 
+cp okcash ~/okapps
+
+# Remove okcash source folder
 cd
 
-# end Client
+sudo rm -r okcash
 
-echo "Done compiling and installing OK from source: Okcash GUI and Daemon - okcash + okcashd - on its latest version for:"
+# end Client
+echo "Done compiling and installing OK from source: okcash GUI and Daemon < okcash + okcashd > on its latest version for:"
 uname -a
-echo "Okcash is now installed on the system."
+echo "A copy of the binaries was saved on <okapps> folder in your home directory"
+echo "You are now empowered with Okcash!"
 echo "enjoy your OK experience"
 exit 0

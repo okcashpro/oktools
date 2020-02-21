@@ -1,27 +1,15 @@
 #!/bin/bash
 echo "Creating okcash.conf file over the user home folder .okcash"
-echo "This could take a minute, enjoy some coffee or water and come back soon..."
 
 date
 
-OKUSER=$USER
-HOMEDIR="/home/$OKUSER"
-OKCASHPATH="$HOMEDIR/.okcash"
-
-echo "User: $OKUSER"
-echo "User home dir: $HOMEDIR"
-echo "User Okcash path: $OKCASHPATH"
-
-# Create Client Directory
-if [ ! -e "$OKCASHPATH" ]
-then
-    mkdir $OKCASHPATH
-fi
-
 sudo apt-get install unzip pwgen -y
 
+# Create .okcash config folder
+mkdir ~/.okcash
+
 # Create configuration File
-touch $OKCASHPATH/okcash.conf
+touch ~/.okcash/okcash.conf
 rpcu=$(pwgen -ncsB 20 1)
 rpcp=$(pwgen -ncsB 20 1)
 echo "rpcuser=$rpcu
@@ -34,7 +22,7 @@ daemon=1
 #listen=1
 #txindex=1
 #maxconnections=1024
-#timeout=15000" > "$OKCASHPATH"/okcash.conf
+#timeout=15000" > ~/.okcash/okcash.conf
 
 # end Client
 echo "okcash.conf file created with random rpcuser and rpcpassword."
