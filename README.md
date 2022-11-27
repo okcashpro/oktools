@@ -5,4 +5,5 @@ oktools
 
 - Compile / Install / Update OK gui and/or nodes.
 - Install required dependencies for OK.
-- create configuration file for OK with random username and password.
+- Create okcash.conf file with random username and password.
+- Instant Sync. [Install the latest OK Blockchain Snapshot]
