@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "installing the required dependency BerkeleyDB 4.8"
+echo "Compiling the required dependency BerkeleyDB 4.8"
 echo "This could take a minute, enjoy some coffee or water and come back soon..."
 
 date
@@ -29,7 +29,7 @@ export LIBRARY_PATH="/usr/local/BerkeleyDB.4.8/lib"
 
 # end Client
 
-echo "BerkeleyDB 4.8 is now installed for:"
-uname -a
+echo "BerkeleyDB 4.8 is now compiled and installed in this system"
+# uname -a
 echo "enjoy your OK experience"
 exit 0

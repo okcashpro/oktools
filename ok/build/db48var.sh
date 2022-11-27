@@ -1,6 +1,6 @@
 #!/bin/bash
-echo "Export DB48 variables."
-echo "This could take a minute, enjoy some coffee or water and come back soon..."
+echo "Exporting the DB.4.8 variables."
+# echo "This could take a minute, enjoy some coffee or water and come back soon..."
 
 date
 
@@ -14,7 +14,7 @@ export LIBRARY_PATH="/usr/local/BerkeleyDB.4.8/lib"
 
 # end Client
 
-echo "Variables locally added for:"
-uname -o
+echo "DB.4.8 Variables locally added for this session"
+# uname -o
 echo "enjoy your OK experience"
 exit 0

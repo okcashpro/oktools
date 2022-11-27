@@ -10,6 +10,6 @@ sudo apt-get update
 sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
 
 # end Client
-echo "DB4.8 is now installed for:"
-uname -a
+echo "DB4.8 is now installed for this system"
+# uname -a
 exit 0

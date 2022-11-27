@@ -1,16 +1,16 @@
 #!/bin/bash
-echo "Compiling Okcash Graphical User Interface and node - okcash + okcashd - from source on its latest version"
+echo "Compiling OK Graphical User Interface and node - okcash + okcashd - from source on its latest version"
 echo "This could take a minute, enjoy some coffee or water and come back soon..."
 
 date
 
-# Install dependencies for Okcash
+# 1. Install dependencies for Okcash
 ./depsok-full.sh
 
-# Install Berkeley DB 4.8 with apt-get
-cd ..
+# 2. Install Berkeley DB 4.8 with apt-get
+# cd ..
 
-chmod +x *
+# chmod +x *
 
 ./db48apt.sh
 
@@ -53,9 +53,9 @@ cd
 sudo rm -r okcash
 
 # end Client
-echo "Done compiling and installing OK from source: okcash GUI and Daemon < okcash + okcashd > on its latest version for:"
+echo "Done compiling and installing OK from source: OK GUI and Daemon < okcash + okcashd > on its latest version for:"
 uname -a
 echo "A copy of the binaries was saved on <okapps> folder in your home directory"
-echo "You are now empowered with Okcash!"
+echo "You are now empowered with OK!"
 echo "enjoy your OK experience"
 exit 0

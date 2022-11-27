@@ -1,9 +1,9 @@
 #!/bin/bash
-echo "Creating okcash.conf file over the user home folder .okcash"
+echo "Creating the okcash.conf file over the user home folder .okcash"
 
 date
 
-sudo apt-get install unzip pwgen -y
+sudo apt-get install pwgen -y
 
 # Create .okcash config folder
 mkdir ~/.okcash
@@ -20,7 +20,7 @@ daemon=1
 #staking=0
 #server=1
 #listen=1
-#txindex=1
+txindex=1
 #maxconnections=1024
 #timeout=15000" > ~/.okcash/okcash.conf
 
