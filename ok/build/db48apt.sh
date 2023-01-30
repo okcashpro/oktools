@@ -3,7 +3,7 @@ echo "installing DB4.8 from apt"
 
 date
 
-sudo apt-get install software-properties-common
+sudo apt-get install software-properties-common -y
 
 sudo add-apt-repository ppa:bitcoin/bitcoin -y
 
