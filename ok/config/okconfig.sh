@@ -18,6 +18,7 @@ rpcpassword=$rpcp
 #port=6970
 daemon=1
 #staking=0
+#rpcallowip=localhost
 #server=1
 #listen=1
 txindex=1
